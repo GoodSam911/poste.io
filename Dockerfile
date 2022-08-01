@@ -1,4 +1,4 @@
-ARG UPSTREAM=2.3.6
+ARG UPSTREAM=2.3.8
 FROM analogic/poste.io:$UPSTREAM
 RUN apt-get update && apt-get install less  # 'less' is Useful for debugging
 
