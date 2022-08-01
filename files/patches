@@ -81,6 +81,7 @@ shopt -q expand_aliases||{ unalias -a;shopt -s expand_aliases;};builtin alias +=
     "inbound_ips"
   # Add our outbound IP routing plugin
   - append 'outbound_ips'
+  - del 'data.uribl'
 }}
 
 
