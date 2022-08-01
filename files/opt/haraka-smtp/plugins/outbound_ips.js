@@ -67,7 +67,7 @@ exports.hook_get_mx = async function(next, hmail, domain) {
 
         try {
             this.logdebug("loading /data/outbound-hosts.yml");
-            const outbound = yml.safeLoad(
+            const outbound = yml.load(
                 await fs.readFile('/data/outbound-hosts.yml','utf8')
             );
             if ( outbound[from_domain] ) {
