@@ -164,6 +164,11 @@ haraka_sub_web=$sockdir/haraka/web-11381.sock
   - sub '^host.*=.*$' "unix_socket = $rspam"
 }}
 
+~ edit /opt/haraka-smtp/plugins/privacy.js; {{
+  - sub 'x-rspamd' "x-"
+}}
+
+
 # Configure redis to listen on a unix socket, and rspamd+admin to connect there
 
 ~ edit /etc/redis/redis.conf; {{
